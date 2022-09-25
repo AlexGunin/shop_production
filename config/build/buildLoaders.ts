@@ -1,0 +1,32 @@
+import webpack from "webpack";
+import MiniCssExtractPlugin from "mini-css-extract-plugin";
+import { BuildOptions } from "./types/config";
+
+const typescriptLoader = {
+  test: /\.tsx?$/,
+  use: "ts-loader",
+  exclude: /node_modules/,
+};
+
+const createScssLoader = (isDev: boolean) => ({
+  test: /\.s[ac]ss$/i,
+  use: [
+    isDev ? "style-loader" : MiniCssExtractPlugin.loader,
+    // Translates CSS into CommonJS
+    {
+      loader: "css-loader",
+      options: {
+        modules: {
+          auto: (resPath: string) => Boolean(resPath.includes(".module.")),
+          localIdentName: isDev ? "[path][name]__[local]" : "[hash:base64:8]",
+        },
+      },
+    },
+    // Compiles Sass to CSS
+    "sass-loader",
+  ],
+});
+
+export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
+  return [typescriptLoader, createScssLoader(options.isDev)];
+}
