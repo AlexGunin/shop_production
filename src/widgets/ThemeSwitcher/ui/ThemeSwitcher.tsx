@@ -5,7 +5,6 @@ import LightIcon from 'shared/assets/icons/theme-light.svg';
 import DarkIcon from 'shared/assets/icons/theme-dark.svg';
 import { Button } from 'shared/ui/Button/Button';
 import { Theme } from 'app/providers/ThemeProvider/ThemeProvider';
-import cls from './ThemeSwitcher.module.scss';
 
 interface Props {
   className?: string;
@@ -16,7 +15,7 @@ export const ThemeSwitcher = ({ className }: Props) => {
 
   return (
     <Button
-      className={cn(cls.ThemeSwitcher, {}, [className])}
+      className={cn('', {}, [className])}
       onClick={toggleTheme}
     >
       {theme === Theme.LIGHT ? <DarkIcon /> : <LightIcon />}
