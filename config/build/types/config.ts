@@ -1,12 +1,13 @@
 export enum BuildMode {
-  PRODUCTION = "production",
-  DEVELOPMENT = "development",
+  PRODUCTION = 'production',
+  DEVELOPMENT = 'development',
 }
 
 export interface BuildPaths {
   entry: string;
   output: string;
   html: string;
+  src: string;
 }
 
 export interface BuildEnv {
