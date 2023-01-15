@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTheme } from 'shared/lib/theme/useTheme';
-import { cn } from 'shared/lib/classNames/classNames';
+import { cn } from 'shared/lib/cn/cn';
 import LightIcon from 'shared/assets/icons/theme-light.svg';
 import DarkIcon from 'shared/assets/icons/theme-dark.svg';
 import { Button } from 'shared/ui/Button/Button';

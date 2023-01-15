@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { cn } from 'shared/lib/classNames/classNames';
+import { cn } from 'shared/lib/cn/cn';
 import { Link, LinkProps } from 'react-router-dom';
 import cls from './AppLink.module.scss';
 

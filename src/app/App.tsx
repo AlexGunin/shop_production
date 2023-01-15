@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react';
 import './styles/index.scss';
 import { useTheme } from 'shared/lib/theme/useTheme';
-import { bindCn } from 'shared/lib/classNames/classNames';
+import { bindCn } from 'shared/lib/cn/cn';
 import { AppRouter } from 'app/providers/router';
 import { Navbar } from 'widgets/Navbar';
 import { SideBar } from 'widgets/SideBar';

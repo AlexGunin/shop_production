@@ -41,11 +41,23 @@ const fileLoader = {
   ],
 };
 
+const babelLoader = {
+  test: /\.(js|jsx|ts|tsx)$/,
+  exclude: /node_modules/,
+  use: {
+    loader: 'babel-loader',
+    options: {
+      presets: ['@babel/preset-env'],
+    },
+  },
+};
+
 export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
   return [
     typescriptLoader,
     createScssLoader(options.isDev),
     svgLoader,
     fileLoader,
+    babelLoader,
   ];
 }
