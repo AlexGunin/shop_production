@@ -4,5 +4,9 @@
   "NAV_LINK.MAIN": "main",
   "NAV_LINK.ABOUT": "about",
   "LOADING": "Loading...",
-  "toggle": "toggle"
+  "toggle": "toggle",
+  "Страница не найдена": "Page not found",
+  "Произошла непредвиденная ошибка": "An unexpected error has occurred",
+  "Обновить страницу": "Reload Page",
+  "Выбросить ошибку": "Throw error"
 }
